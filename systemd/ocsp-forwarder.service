@@ -1,0 +1,21 @@
+[Unit]
+Description=OCSP Forwarder
+
+[Service]
+ExecStart=/usr/local/bin/ocsp-forwarder -proxy_url "http://proxy.stusta.mhn.de:3128" -responder_url "http://ocsp.pca.dfn.de/OCSP-Serve$
+Restart=on-failure
+
+NonBlocking=true
+
+User=ocsp-forwarder
+PrivateTmp=yes
+ProtectSystem=full
+PrivateDevices=yes
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target
+
