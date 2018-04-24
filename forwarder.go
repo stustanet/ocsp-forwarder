@@ -6,6 +6,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"net/http"
 	"net/http/httputil"
@@ -41,6 +42,7 @@ func main() {
 			req.URL.Scheme = responder.Scheme
 			req.URL.Host = responder.Host
 			req.URL.Path = responder.Path + req.URL.Path
+			req.Host = responder.Host
 		},
 		Transport: &http.Transport{
 			Proxy: http.ProxyURL(proxy),
