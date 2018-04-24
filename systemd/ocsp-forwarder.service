@@ -2,7 +2,7 @@
 Description=OCSP Forwarder
 
 [Service]
-ExecStart=/usr/local/bin/ocsp-forwarder -proxy_url "http://proxy.stusta.mhn.de:3128" -responder_url "http://ocsp.pca.dfn.de/OCSP-Serve$
+ExecStart=/usr/local/bin/ocsp-forwarder -proxy_url "http://proxy.stusta.mhn.de:3128" -responder_url "http://ocsp.pca.dfn.de/OCSP-Server/OCSP"
 Restart=on-failure
 
 NonBlocking=true
