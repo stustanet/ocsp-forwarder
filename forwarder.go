@@ -38,7 +38,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	http.ListenAndServe(listen, &httputil.ReverseProxy{
+	err = http.ListenAndServe(listen, &httputil.ReverseProxy{
 		Director: func(req *http.Request) {
 			req.URL.Scheme = responder.Scheme
 			req.URL.Host = responder.Host
@@ -49,4 +49,7 @@ func main() {
 			Proxy: http.ProxyURL(proxy),
 		},
 	})
+	if err != nil {
+		log.Fatal(err)
+	}
 }
