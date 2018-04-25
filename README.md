@@ -29,3 +29,8 @@ ssl_stapling_responder http://127.0.0.1:8234;
 ```
 
 [`ssl_trusted_certificate`](https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_trusted_certificate) must also be set!
+
+Verify that OCSP stapling works:
+```
+openssl s_client -connect example.com:443 -tls1_2  -tlsextdebug  -status | grep -i "OCSP Response"
+```
