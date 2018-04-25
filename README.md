@@ -19,6 +19,9 @@ systemctl enable ocsp-forwarder.service
 systemctl start ocsp-forwarder.service
 ```
 
+Adjust the parameters in the `/etc/systemd/system/ocsp-forwarder.service` as nedeed. For Let's Encrypt X3 certificates the `responder_url` is `http://ocsp.int-x3.letsencrypt.org`.
+
+
 In the nginx config (server block):
 
 ```
