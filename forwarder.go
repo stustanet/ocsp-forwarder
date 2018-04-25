@@ -13,9 +13,11 @@ import (
 )
 
 func main() {
+	var listen string
 	var proxyStr string
 	var responderStr string
 
+	flag.StringVar(&listen, "listen", "127.0.0.1:8234", "Listen Address")
 	flag.StringVar(&proxyStr, "proxy_url", "", "Proxy URL")
 	flag.StringVar(&responderStr, "responder_url", "", "Destination OCSP Responder URL")
 	flag.Parse()
@@ -36,7 +38,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	http.ListenAndServe("127.0.0.1:8234", &httputil.ReverseProxy{
+	http.ListenAndServe(listen, &httputil.ReverseProxy{
 		Director: func(req *http.Request) {
 			req.URL.Scheme = responder.Scheme
 			req.URL.Host = responder.Host
