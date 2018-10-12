@@ -8,13 +8,12 @@ A workaround for web servers without HTTP proxy support for OCSP requests to use
 # add system user for OCSP Forwarder
 useradd --system -s /bin/false -M ocsp-forwarder
 
-# clone and build git source
-git clone https://gitlab.stusta.de/julienschmidt/ocsp-forwarder.git
-cd ocsp-forwarder
-go build -o /usr/local/bin/ocsp-forwarder
+# install go package
+GOPATH=/usr/local/src/go GOBIN=/usr/local/bin go get github.com/stustanet/ocsp-forwarder
 
 # install and start systemd service
-cp systemd/ocsp-forwarder.service /etc/systemd/system/
+cp /usr/local/src/go/src/github.com/stustanet/ocsp-forwarder/systemd/ocsp-forwarder.service /etc/systemd/system/
+# edit /etc/systemd/system/ocsp-forwarder.service
 systemctl enable ocsp-forwarder.service
 systemctl start ocsp-forwarder.service
 ```
