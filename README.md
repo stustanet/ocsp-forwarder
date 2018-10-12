@@ -30,7 +30,7 @@ In the nginx config (server block):
 ssl_stapling_responder http://127.0.0.1:8234;
 ```
 
-[`ssl_trusted_certificate`](https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_trusted_certificate) must also be set!
+[`ssl_trusted_certificate`](https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_trusted_certificate) (containing the chain of intermediate certificates) must also be set!
 
 Verify that OCSP stapling works:
 ```
