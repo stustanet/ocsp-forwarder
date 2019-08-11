@@ -1,4 +1,4 @@
-ocsp-forwarder (1.0) buster; urgency=medium
+ocsp-forwarder (0.1) buster; urgency=medium
 
   * Initial release
 
