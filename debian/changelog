@@ -1,5 +1,5 @@
-ocsp-forwarder (0.2) buster; urgency=medium
+ocsp-forwarder (0.3) buster; urgency=medium
 
-  * Fix systemd service file
+  * add posinstall script to add system user
 
  -- Michael Loipfuehrer  Sun, 11 Aug 2019 21:15:28 +0200
