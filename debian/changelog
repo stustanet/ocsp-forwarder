@@ -1,0 +1,5 @@
+ocsp-forwarder (1.0) buster; urgency=medium
+
+  * Initial release
+
+ -- Michael Loipfuehrer  Sun, 11 Aug 2019 21:15:28 +0200

@@ -1,0 +1,22 @@
+Source: ocsp-forwarder
+Section: devel
+Priority: optional
+Maintainer: StuStaNet <admins@stusta.de>
+Uploaders: Michael Loipfuehrer
+Build-Depends: debhelper (>= 11),
+               dh-golang,
+               golang-go
+Standards-Version: 4.2.1
+Homepage: https://gitlab.stusta.de/stustanet/ocsp-forwarder
+Vcs-Browser: https://gitlab.stusta.de/stustanet/ocsp-forwarder
+Vcs-Git: https://gitlab.stusta.de/stustanet/ocsp-forwarder.git
+XS-Go-Import-Path: gitlab.stusta.de/stustanet/ocsp-forwarder
+Testsuite: autopkgtest-pkg-go
+
+Package: ocsp-forwarder
+Architecture: any
+Built-Using: ${misc:Built-Using}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: HTTP proxy support for webservers
+ 
