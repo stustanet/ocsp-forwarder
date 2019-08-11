@@ -11,7 +11,7 @@ run-build:
   stage: build
   script:
     - apt-get install -y golang-go
-    - dpkg-buildpackage -us -uc
+    - dpkg-buildpackage -b -us -uc
     - mkdir build
     - mv ../ocsp-forwarder*.deb build/
 
