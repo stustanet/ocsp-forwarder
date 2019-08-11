@@ -1,0 +1,26 @@
+# Is performed before the scripts in the stages step
+before_script:
+  - source /etc/profile
+
+# Defines stages which are to be executed
+stages:
+  - build
+
+# Stage "build"
+run-build:
+  stage: build
+  script:
+    - apt-get install -y golang-go
+    - dpkg-buildpackage -us -uc
+    - mkdir build
+    - mv ../ocsp-forwarder*.deb build/
+
+  # This stage is only executed for new tags
+  only:
+    - tags
+
+  # The files which are to be made available in GitLab
+  artifacts:
+    paths:
+      - build/*
+
