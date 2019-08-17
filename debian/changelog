@@ -1,5 +1,17 @@
+ocsp-forwarder (0.1) buster; urgency=medium
+
+  * Initial release
+
+ -- Michael Loipfuehrer <michael.loipfuehrer@stusta.de>  Sun, 11 Aug 2019 21:15:28 +0200
+
+ocsp-forwarder (0.2) buster; urgency=medium
+
+  * Fix systemd service file
+
+ -- Michael Loipfuehrer <michael.loipfuehrer@stusta.de>  Sun, 11 Aug 2019 22:15:28 +0200
+
 ocsp-forwarder (0.3) buster; urgency=medium
 
-  * add posinstall script to add system user
+  * add postinstall script to add system user
 
- -- Michael Loipfuehrer  Sun, 11 Aug 2019 21:15:28 +0200
+ -- Michael Loipfuehrer <michael.loipfuehrer@stusta.de>  Sun, 11 Aug 2019 23:15:28 +0200
