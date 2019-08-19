@@ -1,3 +1,4 @@
 #!/bin/sh
+set -e
 
 adduser --system --no-create-home --shell /bin/false ocsp-forwarder
