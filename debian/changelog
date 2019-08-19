@@ -15,3 +15,9 @@ ocsp-forwarder (0.3) buster; urgency=medium
   * add postinstall script to add system user
 
  -- Michael Loipfuehrer <michael.loipfuehrer@stusta.de>  Sun, 11 Aug 2019 23:15:28 +0200
+
+ocsp-forwarder (0.4) buster; urgency=medium
+
+  * test for version bump 
+
+ -- Michael Loipfuehrer <michael.loipfuehrer@stusta.de>  Sun, 19 Aug 2019 20:15:28 +0200
