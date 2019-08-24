@@ -17,10 +17,10 @@ before_script:
 # Defines stages which are to be executed
 stages:
   - build
-  - upload
+  - upload_to_repo
 
 # Stage "build"
-run-build:
+build:
   stage: build
   script:
     - apt-get install -y golang-go
@@ -37,8 +37,8 @@ run-build:
     paths:
       - build/*
 
-upload:
-  stage: upload
+upload_to_repo:
+  stage: upload_to_repo
   script:
     - echo "Uploading debian package to ssn repository"
     - ssh repo@repo.stusta.mhn.de "echo SSH-Connection working"
