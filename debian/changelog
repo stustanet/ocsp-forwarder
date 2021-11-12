@@ -1,4 +1,4 @@
-ocsp-forwarder (0.5) bullseye; urgency=medium
+ocsp-forwarder (0.6) bullseye; urgency=medium
 
   * upgrade to buster
 
