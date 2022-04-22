@@ -21,7 +21,7 @@ cp /usr/local/src/go/src/github.com/stustanet/ocsp-forwarder/systemd/ocsp-forwar
 systemctl enable --now ocsp-forwarder.service
 ```
 
-Adjust the parameters in the `/etc/systemd/system/ocsp-forwarder.service` as nedeed. For Let's Encrypt X3 certificates the `responder_url` is `http://ocsp.int-x3.letsencrypt.org`.
+Adjust the parameters in the `/etc/systemd/system/ocsp-forwarder.service` as nedeed. For Let's Encrypt X3 certificates the `responder_url` is `http://r3.o.lencr.org/`.
 
 
 In the nginx config (server block):
