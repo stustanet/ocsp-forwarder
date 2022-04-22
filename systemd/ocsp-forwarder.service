@@ -2,7 +2,7 @@
 Description=OCSP Forwarder
 
 [Service]
-ExecStart=/usr/bin/ocsp-forwarder -proxy_url "http://proxy.stusta.mhn.de:3128" -responder_url "http://ocsp.int-x3.letsencrypt.org"
+ExecStart=/usr/bin/ocsp-forwarder -proxy_url "http://proxy.stusta.mhn.de:3128" -responder_url "http://r3.o.lencr.org/"
 Restart=on-failure
 
 NonBlocking=true

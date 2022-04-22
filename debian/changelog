@@ -1,3 +1,9 @@
+ocsp-forwarder (0.7) bullseye; urgency=medium
+
+  * changed servicefile to use new letsencrypt ocsp server
+
+ -- Nico Greger <nico.greger@stusta.de>  Fri, 22 Apr 2022 20:00:00 +0200
+
 ocsp-forwarder (0.6) bullseye; urgency=medium
 
   * upgrade to buster
